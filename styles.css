@@ -1,0 +1,69 @@
+.portfolio-header {
+    position: relative;
+}
+  
+.portfolio-header .mdl-layout__header-row {
+    padding: 0;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+  
+.portfolio-logo-row {
+    min-height: 200px;
+    background-color: #45998b;
+}
+
+.portfolio-logo {
+    background: url(images/naeohmi.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin: auto auto 10px;
+}
+  
+.is-compact .portfolio-logo {
+    height: 50px;
+    width: 50px;
+    margin-top: 7px;
+}
+  
+.is-compact .portfolio-logo-row {
+    min-height: auto;
+}
+ 
+.is-compact .portfolio-title {
+    display: none;
+}
+
+.hello-content {
+    background-color: #f5f5f5;
+}
+.hello-card {
+    margin: 2rem auto;
+    width: 600px;
+}
+@media (max-width: 620px) {
+    .hello-card {
+        width: 90%;
+    }
+}
+.hello-card__links {
+    text-align: center;
+}
+.hello-card__links a {
+    margin: 2.5rem;
+}
+.hello-footer {
+    justify-content: center;
+}
+.hello-icon {
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.hello-icon:hover {
+    color: white;
+    border: 3px solid white;
+}
