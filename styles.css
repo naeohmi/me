@@ -21,13 +21,41 @@
     width: 150px;
     margin: auto auto 10px;
 }
-  
+
+.portfolio-logo:hover {
+    background: url(images/face.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin: auto auto 10px;
+    border: 1px solid #45998b;
+    border-radius: 50%;
+}
+
+.portfolio-face {
+    background: url(images/face.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin: auto auto 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.portfolio-face:hover {
+    background: url(images/naeohmi.png) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin: auto auto 10px;
+}
+
 .is-compact .portfolio-logo {
     height: 50px;
     width: 50px;
     margin-top: 7px;
 }
-  
+
 .is-compact .portfolio-logo-row {
     min-height: auto;
 }
@@ -47,12 +75,6 @@
     .hello-card {
         width: 90%;
     }
-}
-.hello-card__links {
-    text-align: center;
-}
-.hello-card__links a {
-    margin: 2.5rem;
 }
 .hello-footer {
     justify-content: center;
