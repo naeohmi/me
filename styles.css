@@ -11,43 +11,16 @@
   
 .portfolio-logo-row {
     min-height: 200px;
-    background-color: #45998b;
+    background-color: #64e7c8;
 }
 
 .portfolio-logo {
-    background: url(images/naeohmi.png) 50% no-repeat;
+    background: url(images/naeohmi.jpg) 50% no-repeat;
     background-size: cover;
     height: 150px;
     width: 150px;
     margin: auto auto 10px;
-}
-
-.portfolio-logo:hover {
-    background: url(images/face.png) 50% no-repeat;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    margin: auto auto 10px;
-    border: 1px solid #45998b;
     border-radius: 50%;
-}
-
-.portfolio-face {
-    background: url(images/face.png) 50% no-repeat;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    margin: auto auto 10px;
-    border: 1px solid white;
-    border-radius: 50%;
-}
-
-.portfolio-face:hover {
-    background: url(images/naeohmi.png) 50% no-repeat;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    margin: auto auto 10px;
 }
 
 .is-compact .portfolio-logo {
@@ -75,14 +48,15 @@
     justify-content: center;
 }
 .hello-icon {
-    color: white;
-    border: 2px solid white;
+    color: #64e7c8;
+    border: 2px solid #64e7c8;
     border-radius: 50%;
     padding: 10px;
 }
 .hello-icon:hover {
     color: white;
-    border: 3px solid white;
+    border: 2px solid white;
+
 }
 .award-image {
     background: url(images/equalityImpactAward.png) 50% no-repeat;
