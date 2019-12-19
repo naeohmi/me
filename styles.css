@@ -1,19 +1,16 @@
 .portfolio-header {
     position: relative;
 }
-  
 .portfolio-header .mdl-layout__header-row {
     padding: 0;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-}
-  
+} 
 .portfolio-logo-row {
     min-height: 200px;
     background-color: #64e7c8;
 }
-
 .portfolio-logo {
     background: url(images/naeohmi.jpg) 50% no-repeat;
     background-size: cover;
@@ -22,41 +19,44 @@
     margin: auto auto 10px;
     border-radius: 50%;
 }
-
+.portfolio-title {
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px black;
+}
 .is-compact .portfolio-logo {
     height: 50px;
     width: 50px;
     margin-top: 7px;
 }
-
 .is-compact .portfolio-logo-row {
     min-height: auto;
 }
- 
 .is-compact .portfolio-title {
     display: none;
 }
-
 .hello-content {
     background-color: #f5f5f5;
 }
 .hello-card {
     margin: 2rem auto;
-    width: 600px;
+    width: 800px !important;
+}
+.hello-card__header {
+    font-size: 30px;
+    margin: 0 auto;
+}
+.hello-card__subHeader {
+    font-size: 20px;
+    text-align: left;   
 }
 .hello-footer {
     justify-content: center;
 }
 .hello-icon {
-    color: #64e7c8;
-    border: 2px solid #64e7c8;
-    border-radius: 50%;
-    padding: 10px;
-}
-.hello-icon:hover {
     color: white;
     border: 2px solid white;
-
+    border-radius: 50%;
+    padding: 10px;
 }
 .award-image {
     background: url(images/equalityImpactAward.png) 50% no-repeat;
