@@ -82,6 +82,14 @@
   margin: auto auto 10px;
 }
 
+.headshot-image {
+  background: url(images/headshotcircle.png) 50% no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  margin: auto auto 10px;
+}
+
 @media (max-width: 620px) {
   .hello-card {
     width: 90%;
