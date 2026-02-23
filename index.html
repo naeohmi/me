@@ -3,395 +3,759 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="description" content="Naomi Meyer — Software Engineer at T-Mobile, Cybersecurity professional, and international conference speaker. Adobe SDE, UW Cybersecurity Masters graduate, and expert in JavaScript internationalization (I18N), Unicode, and digital safety." />
+    <meta name="keywords" content="Naomi Meyer, software engineer, cybersecurity, T-Mobile, Adobe, JavaScript, TypeScript, React, Angular, Vue, internationalization, i18n, l10n, Unicode, emoji encoding, data visualization, bug bounty, ethical hacking, University of Washington, cybersecurity leadership, Peace Corps, conference speaker, web development, frontend engineering, security engineering" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://naeohmi.github.io/me/" />
+    <meta property="og:title" content="Naomi Meyer — Software Engineer & Cybersecurity Professional" />
+    <meta property="og:description" content="Software Engineer at T-Mobile, UW Cybersecurity Masters graduate, and international conference speaker specializing in JavaScript internationalization and digital safety." />
+    <meta property="og:image" content="https://naeohmi.github.io/me/images/headshotcircle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nae_ohmi" />
+    <meta name="twitter:image" content="https://naeohmi.github.io/me/images/headshotcircle.png" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Naomi Meyer",
+      "url": "https://naeohmi.github.io/me/",
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "T-Mobile"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Washington",
+          "description": "Master's in Cybersecurity and Leadership, graduated with honors"
+        }
+      ],
+      "knowsAbout": [
+        "Software Engineering",
+        "Cybersecurity",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Angular",
+        "Vue",
+        "Internationalization",
+        "i18n",
+        "l10n",
+        "Unicode",
+        "Emoji Encoding",
+        "Data Visualization",
+        "Bug Bounty Research",
+        "Ethical Hacking",
+        "Frontend Engineering",
+        "Web Development",
+        "Python",
+        "Security Engineering",
+        "Education Leadership"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/naeohmi",
+        "https://www.github.com/naeohmi",
+        "https://www.x.com/nae_ohmi",
+        "https://dev.to/naeohmi"
+      ],
+      "description": "Software Engineer at T-Mobile with over a decade of cross-disciplinary experience in software engineering, cybersecurity, and education leadership. Former Adobe SDE, international conference speaker, and University of Washington Cybersecurity Master's graduate."
+    }
+    </script>
     <title>Naomi Meyer</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.teal-orange.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon.png"
-    />
-    <link
-      rel="icon"
-      type="image/ico"
-      sizes="32x32"
-      href="favicon/favicon.ico"
-    />
-    <script src="https://kit.fontawesome.com/e2a5504cc6.js"></script>
+
+    <!-- Material Web 3 via CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.png" />
+    <link rel="icon" type="image/ico" sizes="32x32" href="favicon/favicon.ico" />
+
+
+    <style>
+      :root {
+        --md-sys-color-primary: #1a9e7e;
+        --md-sys-color-on-primary: #ffffff;
+        --md-sys-color-primary-container: #87e4c9;
+        --md-sys-color-surface: #f4fdf9;
+        --md-sys-color-surface-container: #ddf5ec;
+        --md-sys-color-on-surface: #1a1a1a;
+        --md-sys-color-outline: #5a7a70;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--md-sys-color-surface);
+        color: var(--md-sys-color-on-surface);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ── Visually hidden (SEO) ── */
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-on-primary);
+        padding: 0 24px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+
+      .site-header h1 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
+
+      .header-links {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .header-links a {
+        color: var(--md-sys-color-on-primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: background 0.2s;
+      }
+
+      .header-links a:hover {
+        background: rgba(255,255,255,0.15);
+      }
+
+      /* ── Main layout ── */
+      .page-body {
+        flex: 1;
+        display: flex;
+        max-width: 1100px;
+        width: 100%;
+        margin: 32px auto;
+        padding: 0 16px;
+        gap: 32px;
+        align-items: flex-start;
+      }
+
+      /* ── Side nav ── */
+      .side-nav {
+        width: 180px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 88px;
+      }
+
+      .side-nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .side-nav a {
+        display: block;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        color: var(--md-sys-color-on-surface);
+        transition: background 0.15s, color 0.15s;
+        font-weight: 500;
+      }
+
+      .side-nav a:hover {
+        background: var(--md-sys-color-surface-container);
+        color: var(--md-sys-color-primary);
+      }
+
+      .side-nav a.active {
+        background: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-primary);
+      }
+
+      main {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      @media (max-width: 700px) {
+        .side-nav { display: none; }
+        .page-body { margin: 16px auto; }
+      }
+
+      /* ── Cards ── */
+      .portfolio-card {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      .card-header {
+        padding: 20px 24px 16px;
+        border-bottom: 1px solid var(--md-sys-color-surface-container);
+      }
+
+      .card-header h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--md-sys-color-primary);
+      }
+
+      .card-body {
+        padding: 20px 24px;
+      }
+
+      /* ── About text ── */
+      .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #3a3a3a;
+        margin-bottom: 16px;
+      }
+
+      .about-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── Awards & Articles ── */
+      .award-item {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--md-sys-color-surface-container);
+      }
+
+      .award-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .award-item h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--md-sys-color-primary);
+        margin-bottom: 8px;
+      }
+
+      .award-item p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #3a3a3a;
+        margin-bottom: 8px;
+      }
+
+      .award-item a {
+        font-size: 0.85rem;
+        color: var(--md-sys-color-primary);
+        word-break: break-all;
+      }
+
+      .section-intro {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 24px;
+        font-style: italic;
+      }
+
+      /* ── Talk items ── */
+      .talk-item {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--md-sys-color-surface-container);
+      }
+
+      .talk-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .talk-item h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 4px;
+        color: #1a1a1a;
+      }
+
+      .talk-item .talk-subtitle {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      /* ── Video thumbnails ── */
+      .video-link {
+        display: block;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #000;
+        aspect-ratio: 16 / 9;
+        text-decoration: none;
+      }
+
+      .video-link img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.2s;
+      }
+
+      .video-link:hover img {
+        opacity: 0.8;
+      }
+
+      .video-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        background: rgba(255, 0, 0, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        transition: background 0.2s;
+      }
+
+      .video-link:hover .video-play-btn {
+        background: rgba(255, 0, 0, 1);
+      }
+
+      .video-play-btn::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 11px 0 11px 20px;
+        border-color: transparent transparent transparent #ffffff;
+        margin-left: 4px;
+      }
+
+      /* ── Footer ── */
+      footer {
+        background-color: var(--md-sys-color-primary);
+        color: var(--md-sys-color-on-primary);
+        padding: 16px 24px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      footer a {
+        color: var(--md-sys-color-on-primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 20px;
+        transition: background 0.2s;
+      }
+
+      footer a:hover {
+        background: rgba(255,255,255,0.15);
+      }
+
+      /* ── Connect ── */
+      .connect-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .connect-text {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #3a3a3a;
+      }
+
+      .connect-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .connect-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: var(--md-sys-color-primary);
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+
+      .connect-link:hover {
+        opacity: 0.85;
+      }
+
+      /* ── Podcast ── */
+      .podcast-link {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 10px 20px;
+        background-color: var(--md-sys-color-primary);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+
+      .podcast-link:hover {
+        opacity: 0.85;
+      }
+
+      /* ── Images ── */
+      .headshot-image {
+        background: url(images/headshotcircle.png) 50% no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+      }
+
+      .award-image {
+        background: url(images/equalityImpactAward.png) 50% no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 500px;
+        height: 350px;
+        margin: 12px 0;
+        border-radius: 8px;
+      }
+
+      .techBlog-image {
+        background: url(images/adobeTechBlog.png) center no-repeat;
+        background-size: contain;
+        background-color: #f5f5f5;
+        width: 100%;
+        max-width: 500px;
+        height: 350px;
+        margin: 12px 0;
+        border-radius: 8px;
+      }
+
+      .devArticle-image {
+        background: url(images/devArticle.png) 50% no-repeat;
+        background-size: cover;
+        width: 100%;
+        max-width: 500px;
+        height: 350px;
+        margin: 12px 0;
+        border-radius: 8px;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        .site-header h1 { font-size: 1rem; }
+        main { margin: 16px auto; }
+        .card-body, .card-header { padding: 16px; }
+        .award-image, .techBlog-image, .devArticle-image { height: 200px; }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header
-        class="mdl-layout__header mdl-layout__header--waterfall portfolio-header"
-      >
-        <div class="mdl-layout__header-row portfolio-logo-row">
-          <span class="mdl-layout-title">
-            <div class="portfolio-logo"></div>
-            <span class="mdl-layout__title portfolio-title">NAOMI MEYER</span>
-          </span>
+    <header class="site-header">
+      <h1>NAOMI MEYER</h1>
+      <nav class="header-links">
+        <a href="https://www.github.com/naeohmi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/naeohmi" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
+
+    <div class="page-body">
+
+      <nav class="side-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#awards">Awards &amp; Articles</a></li>
+          <li><a href="#talks">Conference Talks</a></li>
+          <li><a href="#podcasts">Podcasts</a></li>
+          <li><a href="#connect">Let's Connect</a></li>
+        </ul>
+      </nav>
+
+      <main>
+
+      <!-- About -->
+      <section class="portfolio-card" id="about">
+        <div class="card-header">
+          <h2>About</h2>
         </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">NAOMI MEYER</span>
-        <nav class="mdl-navigation">
-          <a
-            class="mdl-navigation__link"
-            target="_blank"
-            rel="noopener"
-            href="https://www.github.com/naeohmi"
-          >
-            <i class="fab fa-github fa-lg"></i>
-            <span>Github</span>
-          </a>
-          <a
-            class="mdl-navigation__link"
-            target="_blank"
-            rel="noopener"
-            href="https://www.linkedin.com/in/naeohmi"
-          >
-            <i class="fab fa-linkedin-in fa-lg"></i>
-            <span>Linkedin</span>
-          </a>
-          <a
-            class="mdl-navigation__link"
-            target="_blank"
-            rel="noopener"
-            href="https://www.twitter.com/nae_ohmi"
-          >
-            <i class="fab fa-twitter fa-lg"></i>
-            <span>Twitter</span>
-          </a>
-        </nav>
+        <div class="card-body about-text">
+          <div class="headshot-image"></div>
+          <p>Naomi brings over a decade of cross disciplinary experience in software engineering, cybersecurity, and education leadership.</p>
+          <p>She is currently a Software Engineer at T-Mobile, contributing to core engineering tools across the organization. During her five years as a Software Development Engineer at Adobe, she built high impact features, served on technical committees, and presented at international engineering conferences. She has earned her Master's in Cybersecurity and Leadership from the University of Washington, graduating with honors while simultaneously conducting ethical bug bounty research.</p>
+          <p>Naomi's technical depth is complemented by a global perspective shaped by her earlier years teaching in classrooms across Asia and serving with the Peace Corps in West Africa. She enjoys weekends outside in the mountains with her dog.</p>
+        </div>
+      </section>
+
+      <!-- Awards & Articles -->
+      <section class="portfolio-card" id="awards">
+        <div class="card-header">
+          <h2>Awards &amp; Articles</h2>
+        </div>
+        <div class="card-body">
+
+          <div class="award-item">
+            <h3>Adobe Tech Blog</h3>
+            <p>Building in JavaScript with Internationalization (I18N) in Mind</p>
+            <div class="techBlog-image"></div>
+            <a href="https://blog.developer.adobe.com/building-in-javascript-with-internationalization-i18n-in-mind-815b6bf2c25e" target="_blank" rel="noopener">
+              blog.developer.adobe.com
+            </a>
+          </div>
+
+          <div class="award-item">
+            <h3>DEV Article from CodeLand:Distributed</h3>
+            <p>Emoji Encoding, Unicode, and Internationalization with Naomi Meyer</p>
+            <div class="devArticle-image"></div>
+            <a href="https://dev.to/naeohmi/emoji-encoding-unicode-and-internationalization-with-naomi-meyer-34d3" target="_blank" rel="noopener">
+              dev.to/naeohmi
+            </a>
+          </div>
+
+          <div class="award-item">
+            <h3>Equality Impact Award</h3>
+            <p>Nominee and Winner in 2019</p>
+            <div class="award-image"></div>
+            <a href="https://www.wunderkind.co/blog/article/equality-impact-award-winner-naomi-meyer/" target="_blank" rel="noopener">wunderkind.co</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Conference Talks -->
+      <section class="portfolio-card" id="talks">
+        <div class="card-header">
+          <h2>Recorded Conference Talks</h2>
+        </div>
+        <div class="card-body">
+
+          <p class="section-intro">A selection of recorded notable conference talks from 2018–2025.</p>
+
+          <div class="talk-item">
+            <h3>BSides Seattle — Seattle, WA, USA, 2025</h3>
+            <p class="talk-subtitle">Disaster Ready Digital Safety: Building resilient support systems for domestic violence survivors</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=bvpoq85yPlg" target="_blank" rel="noopener" aria-label="Watch on YouTube: Disaster Ready Digital Safety — BSides Seattle 2025">
+              <img src="https://img.youtube.com/vi/bvpoq85yPlg/maxresdefault.jpg" alt="Disaster Ready Digital Safety — BSides Seattle 2025" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>JSworld — 2021</h3>
+            <p class="talk-subtitle">Emoji Encoding</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=fudkV2Ytulc" target="_blank" rel="noopener" aria-label="Watch on YouTube: Emoji Encoding — JSworld 2021">
+              <img src="https://img.youtube.com/vi/fudkV2Ytulc/maxresdefault.jpg" alt="Emoji Encoding — JSworld 2021" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>ESNEXT — 2020</h3>
+            <p class="talk-subtitle">Data Visualization and Internationalization</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=OOX-nRkiQlw" target="_blank" rel="noopener" aria-label="Watch on YouTube: Data Visualization and Internationalization — ESNEXT 2020">
+              <img src="https://img.youtube.com/vi/OOX-nRkiQlw/maxresdefault.jpg" alt="Data Visualization and Internationalization — ESNEXT 2020" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>JSNation Live — 2020</h3>
+            <p class="talk-subtitle">Emoji Encoding, Unicode, &amp; Internationalization</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=3raGEkzxZtk" target="_blank" rel="noopener" aria-label="Watch on YouTube: Emoji Encoding, Unicode & Internationalization — JSNation Live 2020">
+              <img src="https://img.youtube.com/vi/3raGEkzxZtk/maxresdefault.jpg" alt="Emoji Encoding, Unicode & Internationalization — JSNation Live 2020" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>React Europe — 2020</h3>
+            <p class="talk-subtitle">Data Visualizations and Internationalization</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=12E870o9yA8" target="_blank" rel="noopener" aria-label="Watch on YouTube: Data Visualizations and Internationalization — React Europe">
+              <img src="https://img.youtube.com/vi/12E870o9yA8/maxresdefault.jpg" alt="Data Visualizations and Internationalization — React Europe" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>Codeland — 2020</h3>
+            <p class="talk-subtitle">Emoji Encoding, Unicode, and Internationalization</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=9H84p_vtQwQ" target="_blank" rel="noopener" aria-label="Watch on YouTube: Emoji Encoding, Unicode, and Internationalization — Codeland 2020">
+              <img src="https://img.youtube.com/vi/9H84p_vtQwQ/maxresdefault.jpg" alt="Emoji Encoding, Unicode, and Internationalization — Codeland 2020" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>React Day Berlin — Berlin, Germany, 2019</h3>
+            <p class="talk-subtitle">Data Visualizations and Internationalization</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=qq9BaUKUfpY" target="_blank" rel="noopener" aria-label="Watch on YouTube: Data Visualizations and Internationalization — React Day Berlin">
+              <img src="https://img.youtube.com/vi/qq9BaUKUfpY/maxresdefault.jpg" alt="Data Visualizations and Internationalization — React Day Berlin" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+          <div class="talk-item">
+            <h3>Angular Connect — London, UK, 2019</h3>
+            <p class="talk-subtitle">Building Angular Apps with Internationalization (I18N) in Mind</p>
+            <a class="video-link" href="https://www.youtube.com/watch?v=cUDUqqOtBvM" target="_blank" rel="noopener" aria-label="Watch on YouTube: Building Angular Apps with Internationalization — Angular Connect">
+              <img src="https://img.youtube.com/vi/cUDUqqOtBvM/maxresdefault.jpg" alt="Building Angular Apps with Internationalization — Angular Connect" loading="lazy" />
+              <span class="video-play-btn"></span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Podcasts -->
+      <section class="portfolio-card" id="podcasts">
+        <div class="card-header">
+          <h2>Podcasts</h2>
+        </div>
+        <div class="card-body">
+
+          <div class="talk-item">
+            <h3>Real Talk JavaScript — Episode 82</h3>
+            <p class="talk-subtitle">i18n and l10n with Naomi Meyer</p>
+            <a class="podcast-link" href="https://webrush.io/episodes/i18n-and-l10n-with-n3i-m3r" target="_blank" rel="noopener">
+              🎙 Listen on Web Rush
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Let's Connect -->
+      <section class="portfolio-card" id="connect">
+        <div class="card-header">
+          <h2>Let's Connect</h2>
+        </div>
+        <div class="card-body connect-body">
+          <p class="connect-text">Please reach out to connect on any of the following platforms:</p>
+          <div class="connect-links">
+            <a href="https://www.linkedin.com/in/naeohmi" target="_blank" rel="noopener" class="connect-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.github.com/naeohmi" target="_blank" rel="noopener" class="connect-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.x.com/nae_ohmi" target="_blank" rel="noopener" class="connect-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+              X
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visually hidden skills for SEO -->
+      <div class="visually-hidden" aria-hidden="true">
+        Naomi Meyer is a Software Engineer and Cybersecurity professional based in Seattle, Washington.
+        Technical skills include JavaScript, TypeScript, React, Angular, Vue, Python, Node.js,
+        internationalization (i18n), localization (l10n), Unicode, emoji encoding, data visualization,
+        frontend engineering, web development, REST APIs, bug bounty research, ethical hacking,
+        penetration testing, security engineering, and cybersecurity leadership.
+        Previously a Software Development Engineer at Adobe. Master's degree in Cybersecurity and
+        Leadership from the University of Washington. Conference speaker at React Day Berlin,
+        Angular Connect, Reactathon, JSNation, JSworld, React Europe, Codeland, ESNEXT, and BSides Seattle.
+        Peace Corps volunteer. Education leader.
       </div>
-      <main class="mdl-layout__content hello-content">
-        <div class="mdl-grid">
-          <div class="mdl-card mdl-shadow--2dp hello-card">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text hello-card__header">About</h2>
-            </div>
 
-            <div class="headshot-image"></div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                Naomi brings a unique blend of skills in software engineering, cybersecurity, and education leadership. 
-                <br /><br />
-                Notably over the past five years she developed large scale software features, served on technical committees, and spoke at worldwide engineering conferences as a Software Development Engineer at Adobe.
-                <br /><br />
-                Her international background includes four years as a High School Teacher and Peace Corps leader across Asia and Africa.
-                <br /><br />
-                In summer 2025 she completed her Masters degree in Cybersecurity and Leadership with honors, from the University of Washington and is poised for her next impactful role.
-              </p>
-              <br />
-            </div>
-          </div>
-
-          <div class="mdl-card mdl-shadow--2dp hello-card">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text hello-card__header">
-                Awards & Articles
-              </h2>
-            </div>
-
-            <div class="mdl-card__title">
-              <h3 class="mdl-card__title-text hello-card__subHeader">
-                Adobe Tech Blog
-              </h3>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                Building in JavaScript with Internationalization (I18N) in Mind
-              </p>
-              <div class="techBlog-image"></div>
-
-              <p class="portfolio-text">
-                <i
-                  >https://blog.developer.adobe.com/building-in-javascript-with-internationalization-i18n-in-mind-815b6bf2c25e</i
-                >
-              </p>
-            </div>
-
-            <div class="mdl-card__title">
-              <h3 class="mdl-card__title-text hello-card__subHeader">
-                DEV Article from CodeLand:Distributed
-              </h3>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                Emoji Encoding, Unicode, and Internationalization with Naomi
-                Meyer
-              </p>
-              <div class="devArticle-image"></div>
-
-              <p class="portfolio-text">
-                <i
-                  >https://dev.to/naeohmi/emoji-encoding-unicode-and-internationalization-with-naomi-meyer-34d3</i
-                >
-              </p>
-            </div>
-
-            <div class="mdl-card__title">
-              <h3 class="mdl-card__title-text hello-card__subHeader">
-                Equality Impact Award
-              </h3>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">Nominee and Winner in 2019</p>
-
-              <div class="award-image"></div>
-              <p class="portfolio-text">
-                <i
-                  >https://www.bouncex.com/blog/article/equality-impact-award-winner-naomi-meyer/</i
-                >
-              </p>
-            </div>
-          </div>
-
-          <div class="mdl-card mdl-shadow--2dp hello-card">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text hello-card__header">
-                Recorded Conference Talks
-              </h2>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>React Day Berlin, Berlin, Germany</b>
-                <br />
-                Data Visualizations and Internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/qq9BaUKUfpY?si=-XHIhUuZIwxj0QHE"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>BSides Seattle, WA, USA 2025</b>
-                <br />
-                Disaster Ready Digital Safety: Building resilient support systems for domestic violence survivors
-              </p>
-            <iframe 
-              width="560" 
-              height="315" 
-              src="https://www.youtube.com/embed/bvpoq85yPlg?si=7_bEYDmIaXtTapGc" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen
-            ></iframe>
-          </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>Angular Connect, London, UK</b>
-                <br />
-                Building Angular Apps with Internationalization (I18N) in Mind
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/cUDUqqOtBvM?si=p5iv_Kxa2cwRIg25"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>Reactathon 2020</b>
-                <br />
-                Internationalization in React
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/gDsnA7PfJnU?si=0EP_Z9sY6YhTYCOv"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>ESNEXT 2020</b>
-                <br />
-                Data visualization and internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/OOX-nRkiQlw?si=MurP30agOlr2Gmse"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>JSworld 2021</b>
-                <br />
-                Emoji Encoding
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/fudkV2Ytulc?si=R8pIp7y60uE2jTax"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>vueday 2020</b>
-                <br />
-                Data Visualizations and Internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/MDt35kegZXw?si=viJ0Ydb4--ab7TbP"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>JSNation Live 2020</b>
-                <br />
-                Emoji Encoding, � Unicode, & Internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/3raGEkzxZtk?si=mXVxNXp8CRclX1Hr"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>React Europe</b>
-                <br />
-                Data Visualizations and Internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/12E870o9yA8?si=GgomG-RGObWB4FVF"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-                ></iframe>
-            </div>
-
-            <div class="mdl-card__supporting-text">
-              <p class="portfolio-text">
-                <b>Codeland 2020</b>
-                <br />
-                Emoji Encoding, Unicode, and Internationalization
-              </p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/9H84p_vtQwQ?si=2Z635EaDaNyELkGJ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-
-        <footer class="mdl-mini-footer hello-footer">
-          <ul class="mdl-mini-footer__link-list">
-            <li>
-              <a
-                class="mdl-navigation__link"
-                target="_blank"
-                rel="noopener"
-                href="https://www.github.com/naeohmi"
-              >
-                <i class="fab fa-github fa-lg hello-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="mdl-navigation__link"
-                target="_blank"
-                rel="noopener"
-                href="https://www.linkedin.com/in/naeohmi"
-              >
-                <i class="fab fa-linkedin-in fa-lg hello-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="mdl-navigation__link"
-                target="_blank"
-                rel="noopener"
-                href="https://www.twitter.com/nae_ohmi"
-              >
-                <i class="fab fa-twitter fa-lg hello-icon"></i>
-              </a>
-            </li>
-          </ul>
-        </footer>
       </main>
-    </div>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    </div><!-- /.page-body -->
+
+    <footer>
+      <a href="https://www.github.com/naeohmi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/naeohmi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.x.com/nae_ohmi" target="_blank" rel="noopener">X</a>
+    </footer>
+
+    <script>
+      const navLinks = document.querySelectorAll('.side-nav a');
+      const sections = document.querySelectorAll('section[id]');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      sections.forEach(s => observer.observe(s));
+    </script>
   </body>
 </html>
